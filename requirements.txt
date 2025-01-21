@@ -1,0 +1,1 @@
+PySide6, PyPDF2, docx2txt, reportlab
