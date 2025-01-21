@@ -39,7 +39,7 @@ Allows users to choose the download path for the generated PDF.
 
 ### 5. 高級華麗的圖形介面
 Advanced and elegant graphical user interface built with PySide6.
-![Legal Attest Letter Alignment - GUI Demo](res/GUI.png "GUI 示範圖")
+![Legal Attest Letter Alignment - GUI Demo](res/GUI01.png "GUI 示範圖")
 ### 6. 免費離線使用
 You can use it offline for free.
 
