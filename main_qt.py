@@ -25,7 +25,7 @@ except ImportError:
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("台灣郵局存證信函 - PySide6 版本")
+        self.setWindowTitle("台灣郵局存證信函對齊器")
         self.setGeometry(100, 100, 600, 400)
 
         # 現有欄位
@@ -147,7 +147,18 @@ class MainWindow(QMainWindow):
 
 def run_gui():
     app = QApplication(sys.argv)
+    # 先取得應用程式預設字型
+    default_font = app.font()
+    # 假設它原本是 10 pt，我們想乘以 1.5 => 15 pt
+    default_font.setPointSize(int(default_font.pointSize() * 1.5))
+    # 設定回應用程式
+    app.setFont(default_font)
     window = MainWindow()
+    # 如果你想把整個視窗的大小也擴增 1.5 倍，可以在 MainWindow 初始化後再改
+    # 例如：
+    original_width = window.width()
+    original_height = window.height()
+    window.resize(int(original_width * 1.5), int(original_height * 1.5))
     window.show()
     sys.exit(app.exec())
 
